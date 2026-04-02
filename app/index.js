@@ -1,3 +1,11 @@
+const appInsights = require('applicationinsights');
+
+appInsights.setup()
+  .setAutoCollectRequests(true)
+  .setAutoCollectPerformance(true)
+  .setAutoCollectExceptions(true)
+  .start();
+
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
